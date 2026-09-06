@@ -3,12 +3,14 @@
 Static single-page site. No build step, no dependencies — just open `index.html`.
 
 ```
-index.html    landing page
-404.html      not-found page
-styles.css    all styling (colors live in :root at the top)
-script.js     scroll reveals, stat counters, cursor spotlight, title glitch
-CNAME         xyfer.lol (used by GitHub Pages)
-robots.txt    / sitemap.xml
+index.html         Discord landing page
+discord/index.html /discord -> discord.gg/xyfer redirect
+404.html           not-found page
+logo.svg           the X mark, standalone
+styles.css         all styling (colors live in :root at the top)
+script.js          wordmark glitch + footer year
+CNAME              xyfer.lol (used by GitHub Pages)
+robots.txt         / sitemap.xml
 ```
 
 ## Local preview
@@ -53,12 +55,15 @@ checkbox stays greyed out until GitHub can verify the domain and issue the certi
 
 Note: `.nojekyll` stops GitHub from running the files through Jekyll. Do not delete it.
 
-## Things to swap out
+## Content
 
-- `hi@xyfer.lol` and the discord/github/x handles in `index.html` (the three placeholder
-  socials are wired to a "soon" state until you give them real URLs)
-- the numbers in the `.stats` block (`data-count` attributes)
-- copy in the hero, cards, and the `stack.txt` terminal block
+The site is a single landing page pointing at Discord (`discord.gg/xyfer`).
+The invite appears in three places in `index.html` — the button, the handle
+underneath it, and the `og:description` — plus `discord/index.html`. Update all
+four if the invite ever changes.
+
+The logo is inline SVG in each page so it inherits the text color; `logo.svg` is
+the same mark as a standalone white file for use elsewhere.
 
 ## Theming
 

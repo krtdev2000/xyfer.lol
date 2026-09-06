@@ -4,13 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>xyfer.lol</title>
-<meta name="description" content="xyfer — building fast, sharp things on the web.">
-<meta name="theme-color" content="#0a0a0c">
-<meta property="og:title" content="xyfer.lol">
-<meta property="og:description" content="xyfer — building fast, sharp things on the web.">
+<meta name="description" content="xyfer — join the Discord.">
+<meta name="theme-color" content="#08080a">
+<meta property="og:title" content="xyfer">
+<meta property="og:description" content="Join the Discord — discord.gg/xyfer">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://xyfer.lol">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%230a0a0c'/><path d='M9 9l14 14M23 9L9 23' stroke='%23ff2b39' stroke-width='3.5' stroke-linecap='round'/></svg>">
+<meta property="og:image" content="https://xyfer.lol/logo.svg">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230a0a0c'/><g fill='%23ffffff' transform='translate(14 14) scale(.72)'><path d='M0 0H34L47.86 21H13.86Z'/><path d='M66 0H100L86.14 21H52.14Z'/><path d='M17.16 26H82.84L68.98 47H31.02Z'/><path d='M31.02 53H68.98L82.84 74H17.16Z'/><path d='M13.86 79H47.86L34 100H0Z'/><path d='M52.14 79H86.14L100 100H66Z'/></g></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -23,123 +25,36 @@
   <div class="bg-scan"></div>
 </div>
 
-<header class="nav">
-  <a class="brand" href="#top">
-    <span class="brand-mark">✕</span>
-    <span class="brand-name">xyfer<span class="tld">.lol</span></span>
+<main class="stage">
+
+  <svg class="logo" viewBox="0 0 100 100" aria-label="xyfer" role="img">
+    <g fill="currentColor">
+      <path d="M0 0 H34 L47.86 21 H13.86 Z"/>
+      <path d="M66 0 H100 L86.14 21 H52.14 Z"/>
+      <path d="M17.16 26 H82.84 L68.98 47 H31.02 Z"/>
+      <path d="M31.02 53 H68.98 L82.84 74 H17.16 Z"/>
+      <path d="M13.86 79 H47.86 L34 100 H0 Z"/>
+      <path d="M52.14 79 H86.14 L100 100 H66 Z"/>
+    </g>
+  </svg>
+
+  <h1 class="title" data-text="xyfer">xyfer</h1>
+
+  <p class="lede">The community lives on Discord. Come say something.</p>
+
+  <a class="join" href="https://discord.gg/xyfer" target="_blank" rel="noopener">
+    <svg class="dc" viewBox="0 0 24 18" aria-hidden="true">
+      <path fill="currentColor" d="M20.32 1.51A19.79 19.79 0 0 0 15.43 0c-.21.38-.46.89-.63 1.29a18.4 18.4 0 0 0-5.6 0C9.03.89 8.77.38 8.56 0a19.74 19.74 0 0 0-4.89 1.51C.56 6.15-.28 10.68.14 15.14A19.9 19.9 0 0 0 6.16 18c.49-.66.92-1.37 1.29-2.11-.71-.27-1.39-.6-2.03-.98.17-.13.34-.26.5-.4a14.2 14.2 0 0 0 12.16 0c.16.14.33.27.5.4-.64.38-1.32.71-2.03.98.37.74.8 1.45 1.29 2.11a19.87 19.87 0 0 0 6.02-2.86c.5-5.18-.84-9.67-3.54-13.63ZM8.02 12.4c-1.18 0-2.15-1.09-2.15-2.42 0-1.33.95-2.42 2.15-2.42 1.21 0 2.18 1.09 2.16 2.42 0 1.33-.95 2.42-2.16 2.42Zm7.96 0c-1.18 0-2.15-1.09-2.15-2.42 0-1.33.95-2.42 2.15-2.42 1.21 0 2.18 1.09 2.16 2.42 0 1.33-.95 2.42-2.16 2.42Z"/>
+    </svg>
+    Join the Discord
   </a>
-  <nav class="nav-links">
-    <a href="#work">work</a>
-    <a href="#stack">stack</a>
-    <a href="#contact">contact</a>
-  </nav>
-</header>
 
-<main id="top">
-
-  <section class="hero">
-    <p class="eyebrow"><span class="dot"></span> online — accepting work</p>
-    <h1 class="title" data-text="xyfer">xyfer</h1>
-    <p class="lede">
-      I build fast, sharp things for the web — interfaces that load instantly,
-      tools that don't get in the way, and the occasional experiment that
-      probably shouldn't exist.
-    </p>
-    <div class="cta">
-      <a class="btn btn-primary" href="#contact">Get in touch</a>
-      <a class="btn" href="#work">See the work</a>
-    </div>
-    <ul class="stats">
-      <li><b data-count="47">0</b><span>projects shipped</span></li>
-      <li><b data-count="12">0</b><span>open source repos</span></li>
-      <li><b data-count="99" data-suffix="%">0</b><span>uptime, allegedly</span></li>
-    </ul>
-  </section>
-
-  <section id="work" class="section">
-    <h2 class="section-title"><span class="hash">#</span> work</h2>
-    <div class="cards">
-      <article class="card reveal">
-        <span class="card-tag">web</span>
-        <h3>Interface work</h3>
-        <p>Landing pages, dashboards, and product UI. Hand-built, no bloated frameworks, ships in days not months.</p>
-        <span class="card-arrow">→</span>
-      </article>
-      <article class="card reveal">
-        <span class="card-tag">tools</span>
-        <h3>Automation &amp; bots</h3>
-        <p>Scripts, Discord bots, and small services that do one annoying job so you never have to think about it again.</p>
-        <span class="card-arrow">→</span>
-      </article>
-      <article class="card reveal">
-        <span class="card-tag">infra</span>
-        <h3>Deploy &amp; hosting</h3>
-        <p>Domains, DNS, edge deploys, CI. From a blank repo to a live URL with a green padlock.</p>
-        <span class="card-arrow">→</span>
-      </article>
-      <article class="card reveal">
-        <span class="card-tag">lab</span>
-        <h3>Experiments</h3>
-        <p>Half-finished ideas, weird demos, and things built at 3am purely because they seemed funny at the time.</p>
-        <span class="card-arrow">→</span>
-      </article>
-    </div>
-  </section>
-
-  <section id="stack" class="section">
-    <h2 class="section-title"><span class="hash">#</span> stack</h2>
-    <div class="terminal reveal">
-      <div class="term-bar">
-        <span class="tdot"></span><span class="tdot"></span><span class="tdot"></span>
-        <span class="term-title">xyfer@lol: ~</span>
-      </div>
-      <pre class="term-body"><code><span class="p">$</span> whoami
-xyfer
-
-<span class="p">$</span> cat stack.txt
-frontend   typescript · react · vanilla js · css
-backend    node · python · postgres · redis
-infra      docker · nginx · cloudflare · linux
-other      figma · ffmpeg · too many terminals
-
-<span class="p">$</span> uptime
- up 4 years,  0 regrets,  load average: caffeine
-
-<span class="p">$</span> <span class="cursor">_</span></code></pre>
-    </div>
-  </section>
-
-  <section id="contact" class="section">
-    <h2 class="section-title"><span class="hash">#</span> contact</h2>
-    <div class="contact reveal">
-      <p class="contact-lede">Got something you want built? Send it over.</p>
-      <div class="links">
-        <a class="link" href="mailto:hi@xyfer.lol">
-          <span class="link-key">email</span>
-          <span class="link-val">hi@xyfer.lol</span>
-        </a>
-        <a class="link" href="#" data-soon>
-          <span class="link-key">discord</span>
-          <span class="link-val">@xyfer</span>
-        </a>
-        <a class="link" href="#" data-soon>
-          <span class="link-key">github</span>
-          <span class="link-val">/xyfer</span>
-        </a>
-        <a class="link" href="#" data-soon>
-          <span class="link-key">x</span>
-          <span class="link-val">@xyfer</span>
-        </a>
-      </div>
-    </div>
-  </section>
+  <a class="handle" href="https://discord.gg/xyfer" target="_blank" rel="noopener">discord.gg/xyfer</a>
 
 </main>
 
 <footer class="footer">
   <span>© <span id="year">2026</span> xyfer.lol</span>
-  <span class="footer-sep">/</span>
-  <span>built from scratch, hosted on the edge</span>
 </footer>
 
 <script src="script.js"></script>

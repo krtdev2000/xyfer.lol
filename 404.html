@@ -4,16 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>404 — xyfer.lol</title>
-<meta name="theme-color" content="#0a0a0c">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%230a0a0c'/><path d='M9 9l14 14M23 9L9 23' stroke='%23ff2b39' stroke-width='3.5' stroke-linecap='round'/></svg>">
+<meta name="theme-color" content="#08080a">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230a0a0c'/><g fill='%23ffffff' transform='translate(14 14) scale(.72)'><path d='M0 0H34L47.86 21H13.86Z'/><path d='M66 0H100L86.14 21H52.14Z'/><path d='M17.16 26H82.84L68.98 47H31.02Z'/><path d='M31.02 53H68.98L82.84 74H17.16Z'/><path d='M13.86 79H47.86L34 100H0Z'/><path d='M52.14 79H86.14L100 100H66Z'/></g></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
-<style>
-  .lost { min-height: 78vh; display: flex; flex-direction: column; justify-content: center; }
-  .lost .title { font-size: clamp(80px, 20vw, 200px); }
-</style>
 </head>
 <body>
 <div class="bg" aria-hidden="true">
@@ -22,31 +18,29 @@
   <div class="bg-scan"></div>
 </div>
 
-<header class="nav">
-  <a class="brand" href="/">
-    <span class="brand-mark">✕</span>
-    <span class="brand-name">xyfer<span class="tld">.lol</span></span>
+<main class="stage">
+  <a href="/" aria-label="xyfer home">
+    <svg class="logo" viewBox="0 0 100 100" role="img" aria-label="xyfer">
+      <g fill="currentColor">
+        <path d="M0 0 H34 L47.86 21 H13.86 Z"/>
+        <path d="M66 0 H100 L86.14 21 H52.14 Z"/>
+        <path d="M17.16 26 H82.84 L68.98 47 H31.02 Z"/>
+        <path d="M31.02 53 H68.98 L82.84 74 H17.16 Z"/>
+        <path d="M13.86 79 H47.86 L34 100 H0 Z"/>
+        <path d="M52.14 79 H86.14 L100 100 H66 Z"/>
+      </g>
+    </svg>
   </a>
-  <nav class="nav-links"><a href="/">home</a></nav>
-</header>
 
-<main>
-  <section class="lost">
-    <p class="eyebrow"><span class="dot"></span> error 404 — nothing here</p>
-    <h1 class="title" data-text="404">404</h1>
-    <p class="lede">This page doesn't exist, moved, or never made it out of the drafts folder.</p>
-    <div class="cta"><a class="btn btn-primary" href="/">Back to safety</a></div>
-  </section>
+  <h1 class="title" data-text="404">404</h1>
+  <p class="lede">Nothing here. This page doesn't exist, or never did.</p>
+  <a class="back" href="/">Back home</a>
 </main>
 
 <footer class="footer">
   <span>© <span id="year">2026</span> xyfer.lol</span>
-  <span class="footer-sep">/</span>
-  <span>you took a wrong turn</span>
 </footer>
 
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+<script src="script.js"></script>
 </body>
 </html>
