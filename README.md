@@ -19,24 +19,39 @@ python -m http.server 4173
 
 Then open http://localhost:4173
 
-## Deploy
+## Deploy — GitHub Pages + Namecheap
 
-**Cloudflare Pages** — connect the repo, framework preset "None", build command empty,
-output directory `/`. Add `xyfer.lol` under Custom domains; DNS is automatic if the
-domain is already in the same Cloudflare account.
+Hosting is GitHub Pages, deployed straight from the `main` branch. There is no build
+step and no workflow file: whatever is committed at the repo root is what goes live,
+usually within a minute of pushing.
 
-**GitHub Pages** — push to `main`, Settings → Pages → deploy from branch `main` / root.
-The `CNAME` file sets the domain. At your registrar point:
+**1. Push the repo**
 
 ```
-A     @    185.199.108.153
-A     @    185.199.109.153
-A     @    185.199.110.153
-A     @    185.199.111.153
-CNAME www  <username>.github.io
+git remote add origin https://github.com/<username>/xyfer.lol.git
+git push -u origin main
 ```
 
-**Netlify** — drag the folder onto app.netlify.com, then Domain settings → add `xyfer.lol`.
+**2. Turn on Pages** — repo Settings → Pages → Source: *Deploy from a branch*,
+Branch: `main`, folder: `/ (root)`. The `CNAME` file in this repo sets the custom
+domain to `xyfer.lol`, so that field fills itself in.
+
+**3. DNS at Namecheap** — Domain List → Manage → **Advanced DNS**. Delete the default
+parking records first (`CNAME www → parkingpage.namecheap.com` and the URL Redirect on
+`@`), then add:
+
+```
+A Record       @     185.199.108.153      Automatic
+A Record       @     185.199.109.153      Automatic
+A Record       @     185.199.110.153      Automatic
+A Record       @     185.199.111.153      Automatic
+CNAME Record   www   <username>.github.io.   Automatic
+```
+
+**4. HTTPS** — once DNS resolves, tick **Enforce HTTPS** in Settings → Pages. The
+checkbox stays greyed out until GitHub can verify the domain and issue the certificate.
+
+Note: `.nojekyll` stops GitHub from running the files through Jekyll. Do not delete it.
 
 ## Things to swap out
 
