@@ -1,7 +1,5 @@
 // xyfer.lol
 
-document.getElementById('year').textContent = new Date().getFullYear();
-
 // occasional wordmark glitch
 const title = document.querySelector('.title');
 if (title && !matchMedia('(prefers-reduced-motion: reduce)').matches) {

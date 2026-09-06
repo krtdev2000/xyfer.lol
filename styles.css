@@ -45,6 +45,73 @@ a { color: inherit; text-decoration: none; }
   -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 42%, #000 20%, transparent 76%);
 }
 
+/* slow rotating conic haze — the swirl body */
+.bg-vortex {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
+  mask-image: radial-gradient(circle, #000 18%, transparent 68%);
+  -webkit-mask-image: radial-gradient(circle, #000 18%, transparent 68%);
+  will-change: transform;
+}
+.bg-vortex.v1 {
+  top: 50%; left: 50%;
+  width: 105vmax; height: 105vmax;
+  margin: -52.5vmax 0 0 -52.5vmax;
+  background: conic-gradient(from 0deg,
+    transparent 0deg,
+    rgba(255, 43, 57, .20) 55deg,
+    transparent 130deg,
+    rgba(196, 16, 29, .15) 215deg,
+    transparent 300deg,
+    rgba(255, 43, 57, .14) 345deg,
+    transparent 360deg);
+  animation: spin 68s linear infinite;
+}
+.bg-vortex.v2 {
+  top: 50%; left: 50%;
+  width: 72vmax; height: 72vmax;
+  margin: -36vmax 0 0 -36vmax;
+  background: conic-gradient(from 140deg,
+    transparent 0deg,
+    rgba(196, 16, 29, .18) 70deg,
+    transparent 165deg,
+    rgba(255, 43, 57, .14) 250deg,
+    transparent 340deg);
+  animation: spin 44s linear infinite reverse;
+}
+
+/* thin spiral strokes for definition */
+.bg-spiral {
+  position: absolute;
+  top: 50%; left: 50%;
+  background: url("swirls.svg") center / contain no-repeat;
+  will-change: transform;
+}
+.bg-spiral.p1 {
+  width: 96vmax; height: 96vmax;
+  margin: -48vmax 0 0 -48vmax;
+  opacity: .22;
+  animation: spin 120s linear infinite;
+}
+.bg-spiral.p2 {
+  width: 58vmax; height: 58vmax;
+  margin: -29vmax 0 0 -29vmax;
+  opacity: .15;
+  animation: spin 80s linear infinite reverse;
+}
+.bg-spiral.p3 {
+  width: 148vmax; height: 148vmax;
+  margin: -74vmax 0 0 -74vmax;
+  opacity: .09;
+  animation: spin 200s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
 .bg-glow {
   position: absolute;
   top: 50%; left: 50%;
@@ -160,30 +227,7 @@ a { color: inherit; text-decoration: none; }
 
 .dc { width: 21px; height: auto; }
 
-.handle {
-  display: inline-block;
-  margin-top: 18px;
-  font-family: var(--mono);
-  font-size: 13px;
-  color: var(--fg-faint);
-  transition: color .2s;
-}
-.handle:hover { color: var(--red); }
-
-/* ── footer ──────────────────────────────────────────────── */
-
-.footer {
-  position: fixed;
-  bottom: 0; left: 0; right: 0;
-  padding: 20px;
-  text-align: center;
-  font-family: var(--mono);
-  font-size: 11.5px;
-  color: var(--fg-faint);
-  pointer-events: none;
-}
-
-/* ── 404 ─────────────────────────────────────────────────── */
+/* ── 404 / redirect ──────────────────────────────────────── */
 
 .back {
   display: inline-block;
