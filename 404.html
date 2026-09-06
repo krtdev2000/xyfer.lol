@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>404 — xyfer.lol</title>
+<meta name="theme-color" content="#0a0a0c">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%230a0a0c'/><path d='M9 9l14 14M23 9L9 23' stroke='%23ff2b39' stroke-width='3.5' stroke-linecap='round'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .lost { min-height: 78vh; display: flex; flex-direction: column; justify-content: center; }
+  .lost .title { font-size: clamp(80px, 20vw, 200px); }
+</style>
+</head>
+<body>
+<div class="bg" aria-hidden="true">
+  <div class="bg-grid"></div>
+  <div class="bg-glow"></div>
+  <div class="bg-scan"></div>
+</div>
+
+<header class="nav">
+  <a class="brand" href="/">
+    <span class="brand-mark">✕</span>
+    <span class="brand-name">xyfer<span class="tld">.lol</span></span>
+  </a>
+  <nav class="nav-links"><a href="/">home</a></nav>
+</header>
+
+<main>
+  <section class="lost">
+    <p class="eyebrow"><span class="dot"></span> error 404 — nothing here</p>
+    <h1 class="title" data-text="404">404</h1>
+    <p class="lede">This page doesn't exist, moved, or never made it out of the drafts folder.</p>
+    <div class="cta"><a class="btn btn-primary" href="/">Back to safety</a></div>
+  </section>
+</main>
+
+<footer class="footer">
+  <span>© <span id="year">2026</span> xyfer.lol</span>
+  <span class="footer-sep">/</span>
+  <span>you took a wrong turn</span>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
