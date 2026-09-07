@@ -78,7 +78,13 @@ renders a single static frame under `prefers-reduced-motion`.
 Every color is a variable at the top of `styles.css`:
 
 ```css
---red:      #ff2b39;   /* accent */
---red-deep: #c4101d;   /* gradient end, shadows */
---bg:       #08080a;   /* page black */
+--bg:         #0a0a0c;   /* page black */
+--bg-2:       #131317;   /* cards, ghost buttons */
+--line:       #26262d;   /* borders */
+--accent:     #d9dbe1;   /* silver highlight */
+--fg-dim:     #9698a1;   /* body copy */
 ```
+
+The palette is greyscale throughout — the primary button is a light silver
+gradient on near-black, and the starfield uses white with a fraction of cooler
+grey-blue stars. Star colors live in `drawStar()` in `script.js`, not in the CSS.
