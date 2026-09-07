@@ -227,6 +227,87 @@ a { color: inherit; text-decoration: none; }
 
 .dc { width: 21px; height: auto; }
 
+.btns { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+
+/* outline variant, for the secondary action */
+.ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-family: var(--mono);
+  font-size: 15px;
+  color: var(--fg-dim);
+  padding: 15px 26px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--bg-2);
+  transition: color .2s, border-color .2s, transform .2s cubic-bezier(.2,.8,.2,1);
+}
+.ghost:hover { color: var(--fg); border-color: var(--red); transform: translateY(-3px); }
+.ghost:active { transform: translateY(-1px); }
+
+/* ── purchase ────────────────────────────────────────────── */
+
+.card {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: linear-gradient(180deg, var(--bg-2), rgba(14,14,18,.5));
+  padding: 22px 28px 24px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.price {
+  display: flex;
+  align-items: baseline;
+  gap: 9px;
+  padding-bottom: 14px;
+  margin-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+}
+.price .amount {
+  font-size: 38px;
+  font-weight: 700;
+  letter-spacing: -.03em;
+  color: var(--red);
+}
+.price .per {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--fg-faint);
+}
+
+.incl { list-style: none; display: grid; gap: 9px; }
+.incl li {
+  position: relative;
+  padding-left: 22px;
+  font-size: 14px;
+  color: var(--fg-dim);
+}
+.incl li::before {
+  content: "";
+  position: absolute;
+  left: 2px; top: .55em;
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--red);
+  box-shadow: 0 0 10px rgba(255, 43, 57, .6);
+}
+
+.note {
+  margin-top: 16px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  color: var(--fg-faint);
+}
+.note + .back { margin-top: 24px; }
+
+@media (max-width: 460px) {
+  .card { width: 100%; padding: 20px 22px 22px; }
+}
+
 /* ── 404 / redirect ──────────────────────────────────────── */
 
 .back {
