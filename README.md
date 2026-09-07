@@ -83,7 +83,12 @@ Every color is a variable at the top of `styles.css`:
 --line:       #26262d;   /* borders */
 --accent:     #d9dbe1;   /* silver highlight */
 --fg-dim:     #9698a1;   /* body copy */
+--font:       "Fredoka", system-ui, sans-serif;
 ```
+
+Fredoka is the only typeface, loaded from Google Fonts in each page's `<head>`
+(variable weight 300-700). There is no separate mono face — everything, including
+buttons and small caption text, uses it.
 
 The palette is greyscale throughout — the primary button is a light silver
 gradient on near-black, and the starfield uses white with a fraction of cooler
