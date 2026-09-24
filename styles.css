@@ -27,7 +27,7 @@ body {
   overflow-x: hidden;
 }
 
-body, button, a, label, input, textarea, ::placeholder { text-transform: lowercase; }
+body *, body *::before, body *::after { text-transform: lowercase !important; }
 
 ::selection { background: var(--accent); color: #080000; }
 
@@ -384,7 +384,7 @@ input[type="file"] { padding: 9px; }
   background-size: 40px 40px, 40px 40px, 760px 440px, 980px 560px;
 }
 
-.stars { opacity: .32; mix-blend-mode: screen; }
+.stars { display: none !important; }
 .bg-glow { top: auto; bottom: -55%; width: 120vw; height: 80vh; transform: translateX(-50%); background: radial-gradient(ellipse, rgba(207,13,39,.2), transparent 64%); filter: blur(50px); }
 .bg-scan { opacity: .15; }
 
