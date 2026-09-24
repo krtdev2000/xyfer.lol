@@ -159,6 +159,7 @@ form.addEventListener('submit', async event => {
 
 document.querySelector('#cancel-edit').addEventListener('click', resetForm);
 document.querySelector('#lock-manager').addEventListener('click', () => setUnlocked(false));
+document.querySelector('#nav-lock').addEventListener('click', () => setUnlocked(false));
 document.querySelector('#export-mods').addEventListener('click', () => {
   const blob = new Blob([JSON.stringify(mods, null, 2)], {type: 'application/json'});
   const link = document.createElement('a');
