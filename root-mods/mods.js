@@ -67,7 +67,7 @@ function render() {
 
 async function loadMods() {
   try {
-    const response = await fetch(`data.json?v=${Date.now()}`, {cache: 'no-store'});
+    const response = await fetch(`/api/mods?v=${Date.now()}`, {cache: 'no-store'});
     if (!response.ok) throw new Error();
     const data = await response.json();
     allMods = Array.isArray(data) ? data : [];

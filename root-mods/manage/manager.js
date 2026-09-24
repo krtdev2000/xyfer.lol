@@ -1,41 +1,26 @@
-const API_URL = 'https://api.github.com/repos/krtdev2000/xyfer.lol/contents/root-mods/data.json';
+const API_URL = '/api/mods';
 const TOKEN_KEY = 'xyfer-publish-token';
 const gate = document.querySelector('#key-gate');
 const manager = document.querySelector('#manager');
 const form = document.querySelector('#mod-form');
 let mods = [];
-let fileSha = '';
 
 function token() {
   return sessionStorage.getItem(TOKEN_KEY) || '';
 }
 
-async function api(method = 'GET', body) {
-  const response = await fetch(API_URL, {
+async function api(method = 'GET', body, url = API_URL) {
+  const response = await fetch(url, {
     method,
-    headers: {Accept: 'application/vnd.github+json', Authorization: `Bearer ${token()}`, 'X-GitHub-Api-Version': '2022-11-28'},
+    headers: {'Content-Type': 'application/json', 'X-Admin-Key': token()},
     body: body ? JSON.stringify(body) : undefined
   });
-  if (!response.ok) throw new Error(response.status === 401 || response.status === 403 ? 'That publishing key is invalid or cannot edit this repository.' : 'GitHub could not save the mod library.');
+  if (!response.ok) throw new Error(response.status === 401 || response.status === 403 ? 'That publishing key is invalid.' : 'The mod library could not be saved.');
   return response.json();
 }
 
-function decodeContent(value) {
-  const binary = atob(value.replace(/\n/g, ''));
-  return new TextDecoder().decode(Uint8Array.from(binary, char => char.charCodeAt(0)));
-}
-
-function encodeContent(value) {
-  const bytes = new TextEncoder().encode(value);
-  let binary = '';
-  bytes.forEach(byte => binary += String.fromCharCode(byte));
-  return btoa(binary);
-}
-
 async function loadMods() {
-  const file = await api();
-  fileSha = file.sha;
-  const value = JSON.parse(decodeContent(file.content));
+  const value = await api();
   mods = Array.isArray(value) ? value : [];
   renderLibrary();
 }
@@ -45,8 +30,7 @@ async function saveMods(nextMods) {
   button.disabled = true;
   button.textContent = 'Publishing…';
   try {
-    const result = await api('PUT', {message: 'Update Root Mods library', content: encodeContent(JSON.stringify(nextMods, null, 2) + '\n'), sha: fileSha, branch: 'main'});
-    fileSha = result.content.sha;
+    await api('PUT', nextMods);
     mods = nextMods;
     renderLibrary();
     return true;
@@ -151,6 +135,7 @@ document.querySelector('#key-form').addEventListener('submit', async event => {
   error.textContent = '';
   sessionStorage.setItem(TOKEN_KEY, input.value.trim());
   try {
+    await api('POST', undefined, '/api/verify');
     await loadMods();
     input.value = '';
     setUnlocked(true);
