@@ -317,8 +317,8 @@ a { color: inherit; text-decoration: none; }
 .download-btn:hover, .primary-btn:hover { filter: brightness(1.17); transform: translateY(-1px); }
 .download-btn[aria-disabled="true"] { opacity: .45; pointer-events: none; }
 .empty-state { padding: 90px 20px; text-align: center; border: 1px dashed var(--line); border-radius: 12px; }
-.empty-state .empty-icon { margin: 0 auto 18px; width: 54px; height: 54px; display: grid; place-items: center; border: 1px solid var(--line-2); color: var(--accent); transform: rotate(45deg); }
-.empty-state .empty-icon::first-line { transform: rotate(-45deg); }
+.empty-state .empty-icon { margin: 0 auto 18px; width: 64px; height: 64px; overflow: hidden; border: 1px solid var(--line-2); border-radius: 7px; box-shadow: 0 0 24px rgba(239,35,60,.16); }
+.empty-state .empty-icon img { width: 100%; height: 100%; object-fit: cover; }
 .empty-state p { color: var(--fg-dim); }
 .site-footer { width: min(1180px, calc(100% - 40px)); margin: 0 auto; padding: 24px 0 38px; display: flex; justify-content: space-between; border-top: 1px solid var(--line); color: var(--fg-faint); font-size: 12px; }
 .site-footer a:hover { color: var(--accent); }
