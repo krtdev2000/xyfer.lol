@@ -1,6 +1,6 @@
 import {cp, mkdir, rm} from 'node:fs/promises';
 
-const files = ['index.html', '404.html', 'styles.css', 'script.js', 'logo.svg', 'robots.txt', 'sitemap.xml', 'CNAME'];
+const files = ['index.html', '404.html', 'styles.css', 'script.js', 'logo.svg', 'xyfer.jpg', 'robots.txt', 'sitemap.xml', 'CNAME'];
 const directories = ['discord', 'purchase', 'root-mods'];
 
 await rm('dist', {recursive: true, force: true});
