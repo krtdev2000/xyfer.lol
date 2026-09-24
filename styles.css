@@ -11,7 +11,7 @@
   --fg-faint:   #82585b;
   --accent:     #ef233c;
   --accent-dim: #b80f25;
-  --font: "Fredoka", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font: "Pixelify Sans", monospace;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
