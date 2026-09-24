@@ -1,0 +1,7 @@
+{
+  "name": "xyfer-lol",
+  "private": true,
+  "scripts": {
+    "build": "node --check script.js && node --check root-mods/mods.js && node --check root-mods/manage/manager.js"
+  }
+}

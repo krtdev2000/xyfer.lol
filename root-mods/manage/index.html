@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mod Manager — xyfer.lol</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#080000">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<div class="bg" aria-hidden="true"><div class="bg-glow"></div><div class="bg-scan"></div></div>
+<header class="site-nav"><a class="brand" href="/">XYFER</a><nav><a href="/root-mods/">View Mods</a></nav></header>
+<main class="manager-shell">
+  <section id="key-gate" class="key-gate panel">
+    <p class="eyebrow">RESTRICTED ACCESS</p>
+    <h1>Root access</h1>
+    <p>Enter your secret publishing key to open the mod manager.</p>
+    <form id="key-form">
+      <label>Secret publishing key<input id="secret-key" type="password" required autocomplete="off" placeholder="github_pat_..."></label>
+      <button class="primary-btn" type="submit">Unlock manager</button>
+      <p id="key-error" class="form-error" role="alert"></p>
+    </form>
+  </section>
+  <section id="manager" hidden>
+    <div class="manager-heading"><div><p class="eyebrow">CONTROL CENTER</p><h1>Mod manager</h1><p>Create, customize, edit, and publish your mods.</p></div><button id="lock-manager" class="ghost-btn" type="button">Lock</button></div>
+    <div class="manager-layout">
+      <form id="mod-form" class="panel editor-form">
+        <div class="form-heading"><h2 id="form-title">Add a mod</h2><button id="cancel-edit" class="text-btn" type="button" hidden>Cancel edit</button></div>
+        <input id="mod-id" type="hidden">
+        <div class="field-grid">
+          <label>Mod name<input id="mod-name" maxlength="70" required placeholder="Root Flight"></label>
+          <label>Version<input id="mod-version" maxlength="24" placeholder="v1.0.0"></label>
+        </div>
+        <label>Description<textarea id="mod-description" maxlength="500" required rows="5" placeholder="Tell players what this mod does."></textarea></label>
+        <div class="field-grid">
+          <label>Author<input id="mod-author" maxlength="50" placeholder="xyfer"></label>
+          <label>Tags<input id="mod-tags" maxlength="100" placeholder="movement, utility"></label>
+        </div>
+        <label>Download URL<input id="mod-download" type="url" required placeholder="https://example.com/mod.zip"></label>
+        <div class="field-grid">
+          <label>Logo URL<input id="mod-logo-url" type="url" placeholder="https://example.com/logo.png"></label>
+          <label>Upload logo<input id="mod-logo-file" type="file" accept="image/*"></label>
+        </div>
+        <label>Accent color<input id="mod-color" type="color" value="#ef233c"></label>
+        <label class="toggle"><input id="mod-published" type="checkbox" checked><span>Publish immediately</span></label>
+        <button class="primary-btn" type="submit">Save mod</button>
+      </form>
+      <aside class="panel library"><div class="form-heading"><div><h2>Your mods</h2><p id="library-count"></p></div><button id="export-mods" class="text-btn" type="button">Export</button></div><div id="manager-list" class="manager-list"></div><label class="import-btn">Import JSON<input id="import-mods" type="file" accept="application/json"></label></aside>
+    </div>
+  </section>
+</main>
+<script src="../../script.js"></script>
+<script src="manager.js"></script>
+</body>
+</html>

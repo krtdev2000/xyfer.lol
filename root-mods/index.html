@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Root Mods — xyfer.lol</title>
+<meta name="description" content="Browse Root Mods from xyfer.">
+<meta name="theme-color" content="#080000">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<div class="bg" aria-hidden="true"><div class="bg-glow"></div><div class="bg-scan"></div></div>
+<header class="site-nav">
+  <a class="brand" href="/">XYFER</a>
+  <nav><a href="/">Home</a><a href="/purchase/">Purchase</a><a class="active" href="/root-mods/">Root Mods</a></nav>
+</header>
+<main class="mods-shell">
+  <section class="mods-hero">
+    <p class="eyebrow">XYFER COLLECTION</p>
+    <h1>Root <span>Mods</span></h1>
+    <p>Browse, download, and run the latest community tools.</p>
+  </section>
+  <section class="mods-toolbar">
+    <label class="search"><span>⌕</span><input id="mod-search" type="search" placeholder="Search mods" autocomplete="off"></label>
+    <span id="mod-count" class="mod-count"></span>
+  </section>
+  <section id="mods-grid" class="mods-grid" aria-live="polite"></section>
+  <section id="mods-empty" class="empty-state" hidden>
+    <div class="empty-icon">X</div>
+    <h2>No mods published yet</h2>
+    <p>New releases will show up here.</p>
+  </section>
+</main>
+<footer class="site-footer"><span>© 2026 XYFER</span><a href="/root-mods/manage/">Manager</a></footer>
+<script src="../script.js"></script>
+<script src="mods.js"></script>
+</body>
+</html>
