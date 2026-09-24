@@ -379,9 +379,8 @@ input[type="file"] { padding: 9px; }
   background-image:
     linear-gradient(rgba(255,255,255,.028) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255,255,255,.028) 1px, transparent 1px),
-    repeating-radial-gradient(ellipse at 12% 52%, transparent 0 54px, rgba(239,35,60,.045) 55px 56px, transparent 57px 106px),
-    repeating-radial-gradient(ellipse at 78% 42%, transparent 0 76px, rgba(255,255,255,.035) 77px 78px, transparent 79px 142px);
-  background-size: 40px 40px, 40px 40px, 760px 440px, 980px 560px;
+    radial-gradient(ellipse at 50% 62%, rgba(239,35,60,.07), transparent 48%);
+  background-size: 40px 40px, 40px 40px, 100% 100%;
 }
 
 .stars { display: none !important; }
