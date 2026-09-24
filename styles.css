@@ -305,7 +305,7 @@ a { color: inherit; text-decoration: none; }
 .mods-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
 .mod-card { min-width: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 12px; background: linear-gradient(145deg, rgba(33,7,8,.96), rgba(8,0,0,.92)); box-shadow: inset 0 1px rgba(255,255,255,.03); transition: transform .22s, border-color .22s; }
 .mod-card:hover { transform: translateY(-5px); border-color: var(--card-accent); }
-.mod-visual { height: 180px; display: grid; place-items: center; overflow: hidden; background: radial-gradient(circle, color-mix(in srgb, var(--card-accent) 30%, transparent), transparent 68%), #0d0102; color: var(--card-accent); font-size: 70px; font-weight: 700; }
+.mod-visual { width: 100%; height: auto; aspect-ratio: 16 / 9; display: grid; place-items: center; overflow: hidden; background: radial-gradient(circle, color-mix(in srgb, var(--card-accent) 30%, transparent), transparent 68%), #0d0102; color: var(--card-accent); font-size: 70px; font-weight: 700; }
 .mod-visual img { width: 100%; height: 100%; object-fit: cover; }
 .mod-body { padding: 22px; }
 .mod-meta { display: flex; justify-content: space-between; gap: 10px; color: var(--fg-faint); font-size: 11px; text-transform: uppercase; letter-spacing: .08em; }
