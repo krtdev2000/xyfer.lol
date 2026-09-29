@@ -4,6 +4,7 @@ Static single-page site. No build step, no dependencies — just open `index.htm
 
 ```
 index.html          Discord landing page
+games/              brickfall, a canvas idle breakout game
 purchase/index.html purchase page -> store.reseller.best listing
 discord/index.html  /discord -> discord.gg/xyfer redirect
 404.html            not-found page

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brickfall — xyfer.lol</title>
+<meta name="description" content="brickfall, an idle breakout game on xyfer.lol.">
+<meta name="theme-color" content="#080000">
+<meta property="og:title" content="brickfall">
+<meta property="og:description" content="an idle breakout game.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://xyfer.lol/games/">
+<meta property="og:image" content="https://xyfer.lol/xyfer.jpg">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="/xyfer.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<div class="bg" aria-hidden="true"><div class="bg-glow"></div><div class="bg-scan"></div></div>
+
+<header class="site-nav">
+  <a class="brand brand-lockup" href="/"><span class="brand-image"></span><span>xyfer</span></a>
+  <nav><a href="/">Home</a><a href="/root-mods/">Root Mods</a><a class="active" href="/games/">Games</a><a href="/purchase/">Purchase</a></nav>
+  <a class="nav-cta" href="/purchase/">Get XYFER</a>
+</header>
+
+<main class="game-shell">
+  <section class="game-head">
+    <h1 class="game-title">brick<span>fall</span></h1>
+    <p class="lede">the wall drops. break it before it lands. it saves on its own.</p>
+  </section>
+
+  <section class="hud" aria-label="score">
+    <div><span>scrap</span><strong id="hud-scrap">0</strong></div>
+    <div><span>wave</span><strong id="hud-wave">1</strong></div>
+    <div><span>best</span><strong id="hud-best">0</strong></div>
+    <div><span>lives</span><strong id="hud-lives">3</strong></div>
+    <div class="combo-cell"><span>combo</span><strong id="hud-combo">x1</strong></div>
+    <div><span>beacon</span><strong id="hud-beacon">0/s</strong></div>
+  </section>
+
+  <div class="field">
+    <canvas id="game" width="480" height="620" aria-label="brickfall play area" tabindex="0"></canvas>
+    <div id="over" class="game-over" hidden>
+      <h2>wall landed</h2>
+      <p id="over-line">wave 1. scrap kept.</p>
+      <button id="restart" class="primary-btn" type="button">run it back</button>
+    </div>
+  </div>
+
+  <p class="hint" id="hint">move with the mouse, arrow keys, or touch. autopilot, beacon and multiball keep it running on their own.</p>
+
+  <section class="shop-shell">
+    <h2>upgrades</h2>
+    <div id="shop" class="shop"></div>
+  </section>
+
+  <p class="hint" id="note"></p>
+
+  <div class="game-actions">
+    <button id="wipe" class="ghost-btn" type="button">erase save</button>
+    <a class="back" href="/">Back home</a>
+  </div>
+</main>
+
+<footer class="site-footer"><span>© 2026 XYFER</span><a href="/games/">games</a></footer>
+
+<script src="game.js"></script>
+</body>
+</html>
