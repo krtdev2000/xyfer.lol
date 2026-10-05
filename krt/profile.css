@@ -17,6 +17,7 @@ h1 { font-size: 42px; line-height: 1; letter-spacing: -.04em; }
 .links a { display: grid; grid-template-columns: 42px 1fr auto; align-items: center; gap: 12px; padding: 12px 14px; color: inherit; text-align: left; text-decoration: none; border: 1px solid rgba(255,255,255,.1); border-radius: 12px; background: rgba(255,255,255,.045); transition: transform .18s ease, border-color .18s ease, background .18s ease; }
 .links a:hover { transform: translateY(-2px); border-color: rgba(239,35,60,.6); background: rgba(239,35,60,.1); }
 .link-icon { width: 42px; height: 42px; display: grid; place-items: center; border-radius: 10px; background: #210609; color: var(--red); font-size: 19px; font-weight: 700; }
+.link-icon img { width: 21px; height: 21px; display: block; }
 .links a > span:nth-child(2) { display: grid; }
 .links strong { font-size: 15px; }
 .links small { color: var(--muted); font-size: 12px; }
