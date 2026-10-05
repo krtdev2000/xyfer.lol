@@ -11,7 +11,7 @@
   --fg-faint:   #b58a8d;
   --accent:     #ef233c;
   --accent-dim: #b80f25;
-  --font: "Fredoka", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font: "Minecraft", monospace;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }

@@ -411,7 +411,7 @@ function draw() {
   ctx.fillRect(0, 0, W * progress, 3);
 
   ctx.fillStyle = DIM;
-  ctx.font = '600 11px "Fredoka", sans-serif';
+  ctx.font = '600 11px "Minecraft", monospace';
   ctx.fillText(`wave ${state.wave}`, 14, 20);
   ctx.textAlign = 'right';
   ctx.fillText(`${state.lives} lives`, W - 14, 20);

@@ -1,12 +1,15 @@
 :root { --red: #ef233c; --text: #fff5f5; --muted: #c69a9d; }
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { min-height: 100vh; display: grid; place-items: center; padding: 28px 18px; overflow-x: hidden; background: #050000; color: var(--text); font-family: "Fredoka", system-ui, sans-serif; text-transform: lowercase; }
+body { min-height: 100vh; display: grid; place-items: center; padding: 28px 18px; overflow-x: hidden; background: #050000; color: var(--text); font-family: "Minecraft", monospace; text-transform: lowercase; }
 .profile-bg { position: fixed; inset: -40px; z-index: -1; background: linear-gradient(rgba(5,0,0,.5), rgba(5,0,0,.82)), url('/xyfer.jpg') center/cover; filter: blur(18px) saturate(.85); transform: scale(1.08); }
 .profile-bg::after { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 50% 38%, transparent 0 15%, rgba(0,0,0,.76) 68%), repeating-linear-gradient(90deg, transparent 0 47px, rgba(239,35,60,.035) 48px), repeating-linear-gradient(0deg, transparent 0 47px, rgba(239,35,60,.035) 48px); }
 .profile-card { width: min(430px, 100%); padding: 38px 30px 26px; text-align: center; border: 1px solid rgba(255,255,255,.13); border-radius: 22px; background: rgba(8,0,0,.72); box-shadow: 0 28px 90px rgba(0,0,0,.65), 0 0 55px rgba(239,35,60,.1); backdrop-filter: blur(20px); }
 .avatar-wrap { position: relative; width: 112px; height: 112px; margin: 0 auto 18px; }
 .avatar { width: 100%; height: 100%; object-fit: cover; border: 3px solid rgba(255,255,255,.85); border-radius: 50%; box-shadow: 0 0 0 5px rgba(239,35,60,.16), 0 12px 35px rgba(0,0,0,.5); }
-.status { position: absolute; right: 3px; bottom: 7px; width: 23px; height: 23px; border: 5px solid #120304; border-radius: 50%; background: #23a55a; }
+.status { position: absolute; right: 3px; bottom: 7px; width: 23px; height: 23px; border: 5px solid #120304; border-radius: 50%; background: #80848e; }
+.status.online { background: #23a55a; }
+.status.idle { background: #f0b232; }
+.status.dnd { background: #f23f43; }
 h1 { font-size: 42px; line-height: 1; letter-spacing: -.04em; }
 .handle { margin-top: 7px; color: var(--red); font-size: 14px; font-weight: 600; }
 .bio { margin: 16px auto 25px; color: var(--muted); font-size: 16px; }
